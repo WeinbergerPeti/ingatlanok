@@ -6,9 +6,10 @@ class IngatlanController{
         const token = $(`meta[name="csrf-token"]`).attr("content");
         const adatFeldolgozMdel = new AdatFeldolgozModel;
 
-        this.vegpont = "/ingatlans";
+        this.vegpont = "/ingatlanoks";
         adatFeldolgozMdel.adatBe(this.vegpont, this.ingatlanAdatok);
     }
+
     ingatlanAdatok(tomb){
         const szuloelem = $("article")
         new IngatlansView(tomb, szuloelem);

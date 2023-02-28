@@ -7,3 +7,12 @@ body{
     width: 1500px;
     border: 1px solid black;
 }
+img
+{
+    width: 100%;
+}
+.ingatlan
+{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+}

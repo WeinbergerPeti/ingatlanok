@@ -12,6 +12,7 @@
 <body>
     <main>
         <h1>Ajánlataink</h1>
+        <article></article>
     </main>
 </body>
 </html>
