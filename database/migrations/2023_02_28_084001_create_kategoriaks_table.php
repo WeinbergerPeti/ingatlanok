@@ -1,5 +1,6 @@
 <?php
 
+use App\Models\Kategoriak;
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
@@ -13,9 +14,11 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('ingatlanoks', function (Blueprint $table) {
+        Schema::create('kategoriaks', function (Blueprint $table) {
             $table->id();
+            $table->string("nev");
             $table->timestamps();
+            
         });
     }
 
@@ -26,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('ingatlanoks');
+        Schema::dropIfExists('kategoriaks');
     }
 };

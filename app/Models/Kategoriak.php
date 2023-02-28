@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class Kategoriak extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'id',
+        'nev'
+    ];
 }
