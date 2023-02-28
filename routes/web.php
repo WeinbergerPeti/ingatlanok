@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\IngatlanokController;
+use App\Http\Controllers\KategoriakController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -14,11 +16,18 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('index');
 });
+//KategoriakController
+Route::get('/kategoriaks', [KategoriakController::class, 'index']);
+Route::get('/kategoria/{id}', [KategoriakController::class, 'show']);
+Route::delete('/kategoriaks/{id}', [KategoriakController::class, 'destroy']);
+Route::post('/kategoriaks', [KategoriakController::class, 'store']);
+Route::put('/kategoriaks/{id}', [KategoriakController::class, 'update']);
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
+//KategoriakController
+Route::get('/ingatlanoks', [IngatlanokController::class, 'index']);
+Route::get('/ingatlan/{id}', [IngatlanokController::class, 'show']);
+Route::delete('/ingatlanoks/{id}', [IngatlanokController::class, 'destroy']);
+Route::post('/ingatlanoks', [IngatlanokController::class, 'store']);
+Route::put('/ingatlanoks/{id}', [IngatlanokController::class, 'update']);
