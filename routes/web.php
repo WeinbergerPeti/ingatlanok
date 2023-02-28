@@ -25,7 +25,7 @@ Route::delete('/kategoriaks/{id}', [KategoriakController::class, 'destroy']);
 Route::post('/kategoriaks', [KategoriakController::class, 'store']);
 Route::put('/kategoriaks/{id}', [KategoriakController::class, 'update']);
 
-//KategoriakController
+//IngatlanokController
 Route::get('/ingatlanoks', [IngatlanokController::class, 'index']);
 Route::get('/ingatlan/{id}', [IngatlanokController::class, 'show']);
 Route::delete('/ingatlanoks/{id}', [IngatlanokController::class, 'destroy']);
